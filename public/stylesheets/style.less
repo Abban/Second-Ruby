@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+SWATCH
+------------------------------------------*/
+
+@dark-blue:#343c3f;
+@light-blue:#25aae1;
+@dark-grey:#82939a;
+@light-grey: #ddd;
+@white: #fff;
+
+/*----------------------------------------
+RESET AND GRID
+------------------------------------------*/
+@import "reset.less";
+@import "text.less";
+@import "grid.less";
+
+/*----------------------------------------
+FORMS
+------------------------------------------*/
+
+input, textarea{
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="number"], textarea{
+	padding:5px;
+	border: 1px solid @light-grey;
+	font-size: 1em;
+}
+input[type="submit"]{
+	background: @light-blue;
+	color: @white;
+	border:none;
+	
+	&:hover,&:focus{
+		cursor: pointer;
+		background: @dark-blue;
+	}
+}
+
+#commentform{
+	label{
+		padding-top: 3px;
+		float: left;
+		width: 200px;
+		margin-right: 12px;
+		text-align: right;
+	}
+	textarea{
+		height:200px;
+		width:400px;
+	}
+	.form-submit{
+		padding-left: 212px;
+		
+		.comment_disclaimer{
+			font-size: small;
+		}
+	}
+}
+
+/*----------------------------------------
+UNIVERSAL LAYOUT
+------------------------------------------*/
+body{
+	background: @dark-blue;
+}
+header#worlds_birth{
+	padding-top: 1.5em;
+	background: @dark-blue;
+	#logo{
+		font-size: 3em;
+		font-weight: bold;
+		line-height: 1;
+		a:hover, a:focus{
+			color: @white;
+		}
+	}
+	nav{
+		background: @dark-blue;
+		ul{
+			margin-bottom: 0;
+			line-height: 3em;
+			> li{
+				display: inline;
+			}
+			a{
+				font-weight: bold;
+				color:@white;
+				padding-right: 20px;
+				&:hover, &:focus{
+					color:@light-blue;
+				}
+			}
+		}
+	}
+}
+#main{
+	margin:0 -12px;
+	padding:1.5em 12px;
+	background: @white;
+	width: 100%;
+	min-width: 1008px;
+	.meta{
+		font-size: small;
+	}
+}
+aside#worlds_edge{
+	min-height: 500px;
+	padding:5px;
+	ul{
+		list-style-type: none;
+		margin-right: 0;
+		padding-left: 0;
+		margin-bottom: 4.5em;
+		li{
+			padding:3px;
+			border-bottom: 1px solid @light-grey;
+		}
+	}
+	h3{
+		background: @light-grey;
+		color: @white;
+		padding:3px;
+		margin-bottom: 0;
+	}
+}
+footer#worlds_end{
+	padding: 1.5em 0;
+	background: @dark-blue;
+	color: @white;
+}
